@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador de Texto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="esquerda">
+            <img class="logo-alura" src="img/logo-alura.svg" alt="Logotipo Alura">
+            <form>
+                <textarea id="texto-principal" type="text" placeholder="Digite seu texto"></textarea>
+                <div>
+                    <div class="alerta">
+                        <img src="img/warning.svg">
+                        <span>Apenas letras minúsculas e sem acento.</span>
+                    </div>
+                    <div class="botoes">
+                        <button class="bt-cripto" id="criptografar" type="button">Criptografar</button>
+                        <button class="bt-descripto" id="descriptografar" type="button">Descriptografar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="direita">
+            <div class="sem-retorno">
+                <img src="img/looking.svg" id="mensagem-nao-encontrada" alt="Nenhuma mensagem encontrada">
+                <h3 class="titulo-sem-retorno">Nenhuma mensagem encontrada</h3>
+                <p>Digite um texto que você deseja criptografar ou descriptografar</p>
+            </div>
+            <div class="texto-criptografado d-none">
+                <p id="texto-criptografado"></p>
+                <button class="bt-copiar" id="copiar" onclick="copiarTexto()">Copiar</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p class="links">Por <a href="https://www.linkedin.com/in/david-cavalcante-414573260/" target="_blank">David Cavalcante</a> Projetos <a href="https://github.com/David-Cavalcante" target="_blank">GitHub</a>.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
