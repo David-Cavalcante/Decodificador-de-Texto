@@ -15,8 +15,6 @@ Este projeto é um decodificador de texto simples que permite criptografar e des
 - JavaScript
 
 ## Estrutura do Projeto
-
-``plaintext
 .
 ├── index.html
 ├── styles.css
