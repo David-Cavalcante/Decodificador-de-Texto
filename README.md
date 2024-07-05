@@ -30,7 +30,7 @@ Este projeto é um decodificador de texto simples que permite criptografar e des
 
 1. Clone este repositório para o seu ambiente local.
 
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/David-Cavalcante/Decodificador-de-Texto?tab=readme-ov-file)
 
 2. Navegue até o diretório do projeto.
 
