@@ -45,11 +45,11 @@ Como Funciona
 Criptografia
 A criptografia substitui as seguintes letras por suas respectivas sequências:
 
-`e` => `enter`
-`i` => `imes`
-`a` => `ai`
-`o` => `ober`
-`u` => `ufat`
+`e` => `enter`,
+`i` => `imes`,
+`a` => `ai`,
+`o` => `ober`,
+`u` => `ufat`,
 
 ## Autor
 
