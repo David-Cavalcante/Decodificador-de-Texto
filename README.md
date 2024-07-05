@@ -16,7 +16,7 @@ Este projeto é um decodificador de texto simples que permite criptografar e des
 
 ## Estrutura do Projeto
 
-```plaintext
+``plaintext
 .
 ├── index.html
 ├── styles.css
@@ -39,6 +39,7 @@ git clone https://github.com/seu-usuario/nome-do-repositorio.git
 cd nome-do-repositorio
 
 # Demonstração
+![decodificador](decodificador.png)
 
 Como Funciona
 Criptografia
@@ -52,4 +53,4 @@ A criptografia substitui as seguintes letras por suas respectivas sequências:
 
 ## Autor
 
-David Cavalcante - LinkedIn | GitHub
+Desenvolvido por David Cavalcante. Você pode encontrar mais projetos no [LinkedIn](https://www.linkedin.com/in/david-cavalcante-414573260/) e no [GitHub](https://github.com/David-Cavalcante).
