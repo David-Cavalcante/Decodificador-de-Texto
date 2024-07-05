@@ -52,7 +52,9 @@ A criptografia substitui as seguintes letras por suas respectivas sequências:
 ## Autor
 
 Desenvolvido por David Cavalcante. Você pode encontrar mais projetos no [LinkedIn](https://www.linkedin.com/in/david-cavalcante-414573260/) e no [GitHub](https://github.com/David-Cavalcante).
+
 ---
+
 Divirta-se coversando em códigos entre amigos!
 
 https://david-cavalcante.github.io/Decodificador-de-Texto/
