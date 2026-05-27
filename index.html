@@ -2,9 +2,8 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Decodificador de Texto</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,38 +12,39 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="esquerda">
-            <img class="logo-alura" src="img/logo-alura.svg" alt="Logotipo Alura">
-            <form>
-                <textarea id="texto-principal" type="text" placeholder="Digite seu texto"></textarea>
-                <div>
+    <main class="container">
+        <section class="esquerda">
+            <div class="logo-texto">⚡ Dave Decodificador</div>
+            <form id="form-tradutor">
+                <textarea id="texto-principal" placeholder="Digite seu texto..."></textarea>
+                <div class="controles-inferiores">
                     <div class="alerta">
-                        <img src="img/warning.svg">
+                        <span class="icone-alerta">⚠️</span>
                         <span>Apenas letras minúsculas e sem acento.</span>
                     </div>
                     <div class="botoes">
-                        <button class="bt-cripto" id="criptografar" type="button">Criptografar</button>
-                        <button class="bt-descripto" id="descriptografar" type="button">Descriptografar</button>
+                        <button class="bt-cripto" id="criptografar" type="button">🔒 Criptografar</button>
+                        <button class="bt-descripto" id="descriptografar" type="button">🔓 Descriptografar</button>
                     </div>
                 </div>
             </form>
-        </div>
-        <div class="direita">
-            <div class="sem-retorno">
-                <img src="img/looking.svg" id="mensagem-nao-encontrada" alt="Nenhuma mensagem encontrada">
+        </section>
+
+        <section class="direita">
+            <div class="sem-retorno" id="container-vazio">
+                <div class="icone-busca">🔍</div>
                 <h3 class="titulo-sem-retorno">Nenhuma mensagem encontrada</h3>
-                <p>Digite um texto que você deseja criptografar ou descriptografar</p>
+                <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
             </div>
-            <div class="texto-criptografado d-none">
+            <div class="texto-criptografado d-none" id="container-resultado">
                 <p id="texto-criptografado"></p>
-                <button class="bt-copiar" id="copiar" onclick="copiarTexto()">Copiar</button>
+                <button class="bt-copiar" id="copiar" type="button">📋 Copiar Texto</button>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
     
     <footer>
-        <p class="links">Por <a href="https://www.linkedin.com/in/david-cavalcante-414573260/" target="_blank">David Cavalcante</a> Projetos <a href="https://github.com/David-Cavalcante" target="_blank">GitHub</a>.</p>
+        <p class="links">Por <a href="https://www.linkedin.com/in/david-cavalcante-414573260/" target="_blank" rel="noopener">David Cavalcante</a> | Projetos no <a href="https://github.com/David-Cavalcante" target="_blank" rel="noopener">GitHub</a></p>
     </footer>
 
     <script src="script.js"></script>
