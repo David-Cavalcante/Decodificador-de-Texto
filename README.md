@@ -37,7 +37,7 @@ git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://githu
 cd nome-do-repositorio
 
 # Demonstração
-![decodificador](decodificador.png)
+![decodificador] <img width="1896" height="860" alt="image" src="https://github.com/user-attachments/assets/93eb9fbb-1a3a-4e21-9890-823058cfcf5e" />
 
 Como Funciona
 Criptografia
