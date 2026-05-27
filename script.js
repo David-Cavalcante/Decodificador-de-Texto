@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const descriptografarButton = document.getElementById('descriptografar');
     const copiarButton = document.getElementById('copiar');
     const textoPrincipal = document.getElementById('texto-principal');
-    const textoCriptografadoDiv = document.querySelector('.texto-criptografado');
+    const containerResultado = document.getElementById('container-resultado');
     const textoCriptografadoP = document.getElementById('texto-criptografado');
-    const semRetornoDiv = document.querySelector('.sem-retorno');
+    const containerVazio = document.getElementById('container-vazio');
 
     const chaves = {
         'e': 'enter',
@@ -21,39 +21,55 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Correção na descriptografia para rodar na ordem certa e não quebrar palavras
     function descriptografarTexto(texto) {
-        return texto.replace(/enter|imes|ai|ober|ufat/g, function(match) {
-            return Object.keys(chaves).find(key => chaves[key] === match);
-        });
+        let textoDescriptografado = texto;
+        textoDescriptografado = textoDescriptografado.replace(/enter/g, 'e');
+        textoDescriptografado = textoDescriptografado.replace(/imes/g, 'i');
+        textoDescriptografado = textoDescriptografado.replace(/ai/g, 'a');
+        textoDescriptografado = textoDescriptografado.replace(/ober/g, 'o');
+        textoDescriptografado = textoDescriptografado.replace(/ufat/g, 'u');
+        return textoDescriptografado;
+    }
+
+    function gerenciarVisualizacao(textoProcessado) {
+        if (textoProcessado.trim() !== "") {
+            textoCriptografadoP.textContent = textoProcessado;
+            containerResultado.classList.remove('d-none');
+            containerVazio.classList.add('d-none');
+        } else {
+            containerResultado.classList.add('d-none');
+            containerVazio.classList.remove('d-none');
+        }
     }
 
     function copiarTexto() {
         const texto = textoCriptografadoP.textContent;
         navigator.clipboard.writeText(texto).then(() => {
-            alert('Texto copiado para a área de transferência!');
+            const botaoOriginalText = copiarButton.textContent;
+            copiarButton.textContent = '✅ Copiado!';
+            copiarButton.style.borderColor = '#00ff88';
+            copiarButton.style.color = '#00ff88';
+            
+            setTimeout(() => {
+                copiarButton.textContent = botaoOriginalText;
+                copiarButton.style.borderColor = '';
+                copiarButton.style.color = '';
+            }, 2000);
         }).catch(err => {
             console.error('Falha ao copiar o texto: ', err);
         });
     }
 
+    // Eventos de clique nos botões
     criptografarButton.addEventListener('click', function() {
-        const texto = textoPrincipal.value;
-        if (texto) {
-            const textoCriptografado = criptografarTexto(texto);
-            textoCriptografadoP.textContent = textoCriptografado;
-            textoCriptografadoDiv.classList.remove('d-none');
-            semRetornoDiv.classList.add('d-none');
-        }
+        const texto = textoPrincipal.value.toLowerCase();
+        gerenciarVisualizacao(criptografarTexto(texto));
     });
 
     descriptografarButton.addEventListener('click', function() {
-        const texto = textoPrincipal.value;
-        if (texto) {
-            const textoDescriptografado = descriptografarTexto(texto);
-            textoCriptografadoP.textContent = textoDescriptografado;
-            textoCriptografadoDiv.classList.remove('d-none');
-            semRetornoDiv.classList.add('d-none');
-        }
+        const texto = textoPrincipal.value.toLowerCase();
+        gerenciarVisualizacao(descriptografarTexto(texto));
     });
 
     copiarButton.addEventListener('click', copiarTexto);
